@@ -40,7 +40,7 @@ Empresas_FACT <- read_excel("C:\\Users\\MARIAFLOREZ\\OneDrive - UNIVERSIDAD INDU
 View(Empresas_FACT)
 
 
-#Correlación de datos
+#CorrelaciÃ³n de datos
 empcorrel_TD <- cor(Empresas_TD) 
 empcorrel_TEC <- cor(Empresas_TEC) 
 empcorrel_FACT <- cor(Empresas_FACT)
@@ -64,16 +64,16 @@ KMO(empcorrel_FACT)
 
 #Identificar numero de factores
 paral_TD_emp<-fa.parallel(empcorrel_TD,n.obs=121,fa="fa",fm="ml", main = '', ylabel = '')
-title('Análisis Paralelo - Transformación Digital empresas', line = 2, cex.main=0.9,
-      xlab = 'Número de factores', ylab = 'Valores propios')
+title('AnÃ¡lisis Paralelo - TransformaciÃ³n Digital empresas', line = 2, cex.main=0.9,
+      xlab = 'NÃºmero de factores', ylab = 'Valores propios')
 
 paral_TEC_emp<-fa.parallel(empcorrel_TEC,n.obs=256,fa="fa",fm="ml", main = '', ylabel = '')
-title('Análisis Paralelo - Tecnologías 4.0 empresas', line = 2, cex.main=0.9,
-      xlab = 'Número de factores', ylab = 'Valores propios')
+title('AnÃ¡lisis Paralelo - TecnologÃ­as 4.0 empresas', line = 2, cex.main=0.9,
+      xlab = 'NÃºmero de factores', ylab = 'Valores propios')
 
 paral_FACT_emp<-fa.parallel(empcorrel_FACT,n.obs=361,fa="fa",fm="minres", main = '', ylabel = '')
-title('Análisis Paralelo - Factores influyentes empresas', line = 2, cex.main=0.9,
-      xlab = 'Número de factores', ylab = 'Valores propios')
+title('AnÃ¡lisis Paralelo - Factores influyentes empresas', line = 2, cex.main=0.9,
+      xlab = 'NÃºmero de factores', ylab = 'Valores propios')
 
 
 
