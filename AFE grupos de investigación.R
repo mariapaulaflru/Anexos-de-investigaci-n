@@ -41,7 +41,7 @@ GRUPOS_FACT <- read_excel("C:\\Users\\MARIAFLOREZ\\OneDrive - UNIVERSIDAD INDUST
                                          "numeric"))
 View(GRUPOS_FACT)
 
-#Correlación de datos
+#CorrelaciÃ³n de datos
 grupocorrel_TD <- cor(Grupos_TD) 
 grupocorrel_TEC <- cor(GRUPOS_TEC) 
 grupocorrel_FACT <- cor(GRUPOS_FACT)
@@ -64,16 +64,16 @@ KMO(grupocorrel_FACT)
 
 #Identificar numero de factores
 paral_TD_grupo<-fa.parallel(grupocorrel_TD,n.obs=121,fa="fa",fm="ml", main = '', ylabel = '')
-title('Análisis Paralelo - Transformación Digital grupos', line = 2, cex.main=0.9,
-      xlab = 'Número de factores', ylab = 'Valores propios')
+title('AnÃ¡lisis Paralelo - TransformaciÃ³n Digital grupos', line = 2, cex.main=0.9,
+      xlab = 'NÃºmero de factores', ylab = 'Valores propios')
 
 paral_TEC_grupo<-fa.parallel(grupocorrel_TEC,n.obs=256,fa="fa",fm="ml", main = '', ylabel = '')
-title('Análisis Paralelo - Tecnologías 4.0 grupos', line = 2, cex.main=0.9,
-      xlab = 'Número de factores', ylab = 'Valores propios')
+title('AnÃ¡lisis Paralelo - TecnologÃ­as 4.0 grupos', line = 2, cex.main=0.9,
+      xlab = 'NÃºmero de factores', ylab = 'Valores propios')
 
 paral_FACT_grupo<-fa.parallel(grupocorrel_FACT,n.obs=361,fa="fa",fm="ml", main = '', ylabel = '')
-title('Análisis Paralelo - Factores influyentes grupos', line = 2, cex.main=0.9,
-      xlab = 'Número de factores', ylab = 'Valores propios')
+title('AnÃ¡lisis Paralelo - Factores influyentes grupos', line = 2, cex.main=0.9,
+      xlab = 'NÃºmero de factores', ylab = 'Valores propios')
 
 
 #Modelo factorial
